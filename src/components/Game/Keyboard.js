@@ -74,7 +74,7 @@ export default function Keyboard({ handleWrite, handleDelete, fields, word }) {
   useEffect(() => {
     const newKeyboard = makeKeyboardLetters(word, 9)
     setLetters(newKeyboard)
-  }, [])
+  }, [word])
 
 
   function renderKeyboard() {

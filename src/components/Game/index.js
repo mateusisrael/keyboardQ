@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Keyboard from './Keyboard';
 import Screen from './Screen';
 
 
 export default function Game({ correctWord }) {
-  const [word, setWord] = useState("")
   const [enabledField, setEnabledField] = useState(0)
   const [fields, setFields] = useState([])
 
   useState(() => {
     const fieldsArray = []
     correctWord.split("").map((value, i) => {
-      fieldsArray.push({fieldId: i, value: "", buttonId: null})
+      return fieldsArray.push({fieldId: i, value: "", buttonId: null})
     })
 
     setFields(fieldsArray);
@@ -50,7 +49,7 @@ export default function Game({ correctWord }) {
 
   return (
     <>
-      <Screen fields={fields} word={word}/>
+      <Screen fields={fields} word={correctWord}/>
       <Keyboard handleWrite={write} handleDelete={deleteLetter} fields={fields} word={correctWord}/>
       {/* <Keyboard handleWrite={write} /> */}
     </>
