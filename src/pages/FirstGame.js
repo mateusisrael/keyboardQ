@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Keyboard from './Keyboard';
-import Screen from './Screen';
+import Keyboard from '../components/Keyboard';
+import Screen from '../components/Screen';
 
 
-export default function Game({ correctWord }) {
+export default function FirstGame({ correctWord }) {
   const [enabledField, setEnabledField] = useState(0)
   const [fields, setFields] = useState([])
 
