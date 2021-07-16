@@ -8,8 +8,9 @@ import {
 } from 'react-router-dom'
 
 // Components
-import FirstGame from './pages/FirstGame';
 import Home from './pages/Home';
+import FirstGame from './pages/FirstGame';
+import SecondGame from './pages/SecondGame'
 
 
 ReactDOM.render(
@@ -18,7 +19,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" children={<Home />} />
         <Route path={"/firstgame"} children={<FirstGame correctWord={"state"}/>}/>
-        <Route path={"/secondgame"} children={<h1>SecondGame</h1>}/>
+        <Route path={"/secondgame"} children={<SecondGame />}/>
       </Switch>
     </Router>
   </React.StrictMode>,
