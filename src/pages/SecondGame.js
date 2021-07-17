@@ -105,16 +105,17 @@ export default function SecondGame() {
     else return
   }
 
-  function makePair() {}
+
 
   function checkAnswer() {
     if(brands.length < challenger.length) return
     let isCorrect = true;
     brands.map((item, i, array) => {
-      if(i%2 == 0) return
+      if(i%2 === 0) return null
       const par = [array[i], array[i-1]].sort()
       // if(par[0] === par[1]-10) return isCorrect.push(true)
       if(par[0] !== par[1]/10) return isCorrect = false;
+      return null
     });
 
     if(isCorrect === false) {alert("Você errou")}
